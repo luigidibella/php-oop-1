@@ -15,11 +15,11 @@ require_once __DIR__ . '/db.php';
 </head>
 <body>
   <div class="container my-5 text-center">
-    <h1>Movie</h1>
+    <h1 class="bg-black text-danger">Movie</h1>
     <div class="row row-cols-3">
       <?php foreach($movies as $movie) : ?>
         <div class="col text-center">
-          <div class="card mb-3">
+          <div class="card mb-3 card_bg">
             <!-- <img src="..." class="card-img-top" alt="..."> -->
             <div class="card-body">
               <h3 class="card-title"><?php echo $movie->name ?></h3>

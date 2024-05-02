@@ -1,0 +1,17 @@
+body{
+  background-image: url(https://i.pinimg.com/originals/8d/b7/d6/8db7d6ba3dd148002f989781c0b59bb3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card_bg{
+  background-image: url(https://img.freepik.com/premium-photo/blue-green-abstract-painting-blue-green-striped-background_421632-14514.jpg);
+  color: white;
+  border-color: white;
+  cursor: pointer;
+}
+
+.card_bg:hover{
+  color: #dc3545;
+  border-color: #dc3545;
+}
