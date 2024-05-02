@@ -4,17 +4,17 @@ class Movie{
   public $name;
   public $release;
   public $genre;
+
+  function __construct($_name, $_release, $_genre){
+    $this->name = $_name;
+    $this->release = $_release;
+    $this->genre = $_genre;
+  }
 }
 
-$Annihilation = new Movie();
-$Annihilation->name = 'Annihilation';
-$Annihilation->release = '2018';
-$Annihilation->genre = 'Sci-fi/Horror';
+$Annihilation = new Movie('Annihilation', '2018', 'Sci-fi/Horror');
 
-$Matrix = new Movie();
-$Matrix->name = 'Matrix';
-$Matrix->release = '1999';
-$Matrix->genre = 'Azione/Sci-fi';
+$Matrix = new Movie('Matrix', '1999', 'Azione/Sci-fi');
 
 var_dump($Annihilation);
 var_dump($Matrix);
