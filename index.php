@@ -1,15 +1,6 @@
 <?php 
 
-require_once __DIR__ . '/Model/Movie.php';
-
-$Annihilation = new Movie('Annihilation', '2018', 'Sci-fi', 'Horror');
-
-$Matrix = new Movie('Matrix', '1999', 'Azione', 'Sci-fi');
-
-var_dump($Annihilation);
-var_dump($Matrix);
-var_dump($Annihilation->getFullGenre());
-var_dump($Matrix->getFullGenre());
+require_once __DIR__ . '/db.php';
 
 ?>
 
@@ -26,17 +17,19 @@ var_dump($Matrix->getFullGenre());
   <div class="container my-5 text-center">
     <h1>Movie</h1>
     <div class="row row-cols-3">
-      <div class="col">
-        <div class="card text-start" style="width: 18rem;">
-          <!-- <img src="..." class="card-img-top" alt="..."> -->
-          <div class="card-body">
-            <h3 class="card-title">name</h3>
-            <span>release</span>
-            <span>genre</span>
-            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+      <?php foreach($movies as $movie) : ?>
+        <div class="col text-center">
+          <div class="card mb-3">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+              <h3 class="card-title"><?php echo $movie->name ?></h3>
+              <span><?php echo $movie->release ?></span>
+              <span><?php echo $movie->getFullGenre() ?></span>
+              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
           </div>
         </div>
-      </div>
+      <?php endforeach ?>
     </div>
     
   </div>
